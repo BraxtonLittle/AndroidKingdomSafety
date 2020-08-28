@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newappbackground"
+    tools:context="com.something.KingdomSafety.AddTrainingFirstScreen">
+
+    <Button
+        android:id="@+id/homebutton8"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:background="#00FFFFFF"
+        android:drawableTop="@drawable/ic_chevron_left_24px"
+        android:onClick="backbuttonToReviewTrainingsPressed"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/youtubeLinkEditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:textCursorDrawable="@color/cursorBlack"
+        android:cursorVisible="true"
+        android:textColor="#8BD1FF"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/groupcodefields"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youtubeLinkTextView" />
+
+    <TextView
+        android:id="@+id/addTrainingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:text="Add Training"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homebutton8" />
+
+    <TextView
+        android:id="@+id/trainingNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Training Name"
+        android:textColor="#FFFFFF"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/addTrainingTitle"
+        app:layout_constraintStart_toStartOf="@+id/addTrainingTitle"
+        app:layout_constraintTop_toBottomOf="@+id/addTrainingTitle" />
+
+    <EditText
+        android:id="@+id/trainingNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:textCursorDrawable="@color/cursorBlack"
+        android:cursorVisible="true"
+        android:textColor="#8BD1FF"
+        android:background="@drawable/groupcodefields"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trainingNameTextView" />
+
+    <TextView
+        android:id="@+id/youtubeLinkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Youtube Link"
+        android:textSize="26dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/addTrainingTitle"
+        app:layout_constraintStart_toStartOf="@+id/addTrainingTitle"
+        app:layout_constraintTop_toBottomOf="@+id/trainingNameEditText" />
+
+    <Button
+        android:id="@+id/addTrainingScreenOneNextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/groups_button_style"
+        android:onClick="addTrainingScreenOneNextPressed"
+        android:text="Next"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/youtubeLinkEditText"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/youtubeLinkEditText"
+        app:layout_constraintTop_toBottomOf="@+id/youtubeLinkEditText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

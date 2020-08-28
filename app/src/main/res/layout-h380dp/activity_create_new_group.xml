@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gradientbackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateNewGroup">
+
+    <ImageView
+        android:id="@+id/newGroupImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/newappbackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homebutton4"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:background="#00FFFFFF"
+        android:drawableTop="@drawable/ic_chevron_left_24px"
+        android:onClick="backbuttonpressed"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/newgroup"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/groups_borders_filled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homebutton4"
+        app:srcCompat="@color/transparentBackground" />
+
+    <TextView
+        android:id="@+id/creategroup"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="Create a New Group"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/newgroup" />
+
+    <Button
+        android:id="@+id/generatecode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="45dp"
+        android:background="@drawable/groups_button_style"
+        android:onClick="genCode"
+        android:text="NEXT"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/newgroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/companynamefield" />
+
+    <EditText
+        android:id="@+id/companynamefield"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/whiteColor"
+        android:ems="10"
+        android:hint="Company Name"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/newgroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creategroup" />
+
+    <Button
+        android:id="@+id/joinexistinggroupbutton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:onClick="joinExistingGroupPressed"
+        android:text="Click here to join existing group"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/newgroup"
+        app:layout_constraintStart_toStartOf="@+id/newgroup"
+        app:layout_constraintTop_toBottomOf="@+id/generatecode" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

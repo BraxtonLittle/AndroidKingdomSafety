@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Definig a container for you List Item-->
+<!-- Defining where should text be placed. You set you text color here-->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/desired_list_content"
+    android:layout_width="fill_parent"
+    android:layout_height="80sp"
+    android:layout_margin="4dip"
+    android:background="@drawable/adminscreen_userlistview_style_transparent"
+    android:gravity="center"
+    android:text="sample"
+    android:textAlignment="center"
+    android:textColor="#FFFFFF"
+    android:textSize="24sp"
+    android:textStyle="bold" />

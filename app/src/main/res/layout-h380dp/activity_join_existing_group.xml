@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/newappbackground"
+    android:layout_height="match_parent"
+    tools:context=".JoinExistingGroup">
+
+    <Button
+        android:id="@+id/startnewgroupbutton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/groups_button_style"
+        android:onClick="startgroupclicked"
+        android:text="Start new Group"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/startnewgroup"
+        app:layout_constraintEnd_toEndOf="@+id/newgroup"
+        app:layout_constraintStart_toStartOf="@+id/newgroup" />
+
+    <View
+        android:id="@+id/joinexistinggroupcenterview"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homebutton5"/>
+
+    <ImageView
+        android:id="@+id/startnewgroup"
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/groups_borders_filled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joinexistinggroupcenterview"
+        app:srcCompat="@color/transparentBackground" />
+
+    <Button
+        android:id="@+id/homebutton5"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:background="#00FFFFFF"
+        android:drawableTop="@drawable/ic_chevron_left_24px"
+        android:onClick="backbuttonpressed"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/newgroup"
+        android:layout_width="fill_parent"
+        android:layout_height="170dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/groups_borders_filled"
+        app:layout_constraintBottom_toTopOf="@id/joinexistinggroupcenterview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homebutton5"
+        app:srcCompat="@color/transparentBackground" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/checkcodebutton"
+        app:layout_constraintEnd_toEndOf="@id/newgroup"
+        app:layout_constraintStart_toStartOf="@id/newgroup"
+        app:layout_constraintTop_toBottomOf="@+id/groupcode">
+        <EditText
+            android:id="@+id/firstgroupcodefield"
+            android:layout_width="100dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/groupcodefields"
+            android:ems="10"
+            android:gravity="center"
+            android:textCursorDrawable="@color/cursorBlack"
+            android:cursorVisible="true"
+            android:hint="123"
+            android:textColorHint="#D3D3D3"
+            android:maxLength="3"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkcodebutton"
+            app:layout_constraintStart_toStartOf="@+id/newgroup"
+            app:layout_constraintTop_toBottomOf="@+id/groupcode" />
+
+        <EditText
+            android:id="@+id/secondgroupcodefield"
+            android:layout_width="100sp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/groupcodefields"
+            android:ems="10"
+            android:gravity="center"
+            android:textCursorDrawable="@color/cursorBlack"
+            android:cursorVisible="true"
+            android:hint="456"
+            android:textColorHint="#D3D3D3"
+            android:maxLength="3"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkcodebutton"
+            app:layout_constraintStart_toEndOf="@+id/firstgroupcodefield"
+            app:layout_constraintTop_toBottomOf="@+id/groupcode"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/thirdgroupcodefield"
+            android:layout_width="100sp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/groupcodefields"
+            android:ems="10"
+            android:gravity="center"
+            android:maxLength="3"
+            android:textCursorDrawable="@color/cursorBlack"
+            android:cursorVisible="true"
+            android:hint="789"
+            android:textColorHint="#D3D3D3"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/checkcodebutton"
+            app:layout_constraintEnd_toEndOf="@+id/newgroup"
+            app:layout_constraintStart_toEndOf="@+id/secondgroupcodefield"
+            app:layout_constraintTop_toBottomOf="@+id/groupcode"
+            app:layout_constraintVertical_bias="1.0" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/groupcode"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="Group Code"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/newgroup" />
+
+    <Button
+        android:id="@+id/checkcodebutton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/groups_button_style"
+        android:onClick="checkcode"
+        android:text="Check Code"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/newgroup"
+        app:layout_constraintEnd_toEndOf="@+id/newgroup"
+        app:layout_constraintStart_toStartOf="@+id/newgroup" />
+
+    <TextView
+        android:id="@+id/needtostartnewgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:text="Need to start a new group? Click the button to start a new group!"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/startnewgroup"
+        app:layout_constraintStart_toStartOf="@+id/startnewgroup"
+        app:layout_constraintTop_toTopOf="@+id/startnewgroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

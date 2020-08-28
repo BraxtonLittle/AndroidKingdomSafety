@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newappbackground"
+    tools:context=".FinishedQuizScreen">
+
+    <TextView
+        android:id="@+id/scoremessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="Your Score is : 3 / 3"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/clickconfirmtextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
+        android:text="By Clicking confirm you verify that you have watched the video and answered the questions."
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/scoremessage"
+        app:layout_constraintTop_toBottomOf="@+id/scoremessage" />
+
+    <Button
+        android:id="@+id/confirmbutton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/thin_border_style"
+        android:onClick="confirmpressed"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="Confirm"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordedittext" />
+
+    <Button
+        android:id="@+id/backtohomebutton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="130dp"
+        android:background="@drawable/thin_border_style"
+        android:onClick="backhomepressed"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="Back to Home"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmbutton" />
+
+    <EditText
+        android:id="@+id/passwordedittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/whiteColor"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:textColor="#8BD1FF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/confirmbutton"
+        app:layout_constraintStart_toStartOf="@+id/confirmbutton"
+        app:layout_constraintTop_toBottomOf="@+id/clickconfirmtextview" />
+
+    <Button
+        android:id="@+id/confirmpasswordbutton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:textAlignment="viewEnd"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordedittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/passwordedittext"
+        app:layout_constraintTop_toTopOf="@+id/passwordedittext" />
+</androidx.constraintlayout.widget.ConstraintLayout>

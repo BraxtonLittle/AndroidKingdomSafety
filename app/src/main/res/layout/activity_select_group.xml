@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newappbackground"
+    tools:context=".SelectGroup">
+
+    <Button
+        android:id="@+id/backbutton2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#00FFFFFF"
+        android:drawableTop="@drawable/ic_chevron_left_24px"
+        android:onClick="backtoLogin"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/grouplist"
+        style="@android:style/Widget.DeviceDefault.Light.ListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="200dp"
+        android:focusable="true"
+        android:background="#00FFFFFF"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="20.0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/selectgrouplottieanimationview"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintBottom_toBottomOf="@id/grouplist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/grouplist"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loadingindicator" />
+
+    <Button
+        android:id="@+id/joinnewgroup"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/border_style"
+        android:gravity="center"
+        android:onClick="joinnewgroup"
+        android:text="Join or Create Group"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grouplist" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

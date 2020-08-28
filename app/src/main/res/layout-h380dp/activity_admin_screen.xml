@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adminScreenConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newappbackground"
+    tools:context=".AdminScreen">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/adminscreenanimationview"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loadingindicator" />
+
+    <TextView
+        android:id="@+id/companynamefield"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:textColor="#FAFFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/backbutton"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="10dp"
+        android:background="#00FFFFFF"
+        android:drawableTop="@drawable/ic_chevron_left_24px"
+        android:onClick="backtoSelectGroup"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/groupcodeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/transparentBackground"
+        android:gravity="center"
+        android:onClick="shareCodeFromAdmin"
+        android:textColor="#FDFFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:background="#00A9A9A9"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/companynamefield"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/settingsbutton"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="10dp"
+        android:background="#00FFFFFF"
+        android:drawableTop="@drawable/ic_settings_white_18dp"
+        android:onClick="toAdminSettingsClicked"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/completedTrainingsTextView"
+        app:tabSelectedTextColor="@color/whiteColor"
+        app:tabTextAppearance="@style/tabItemSmall"
+        app:tabTextColor="@color/blackColor">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/allUsersTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All Users" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/completeUsersTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/incompleteUsersTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incomplete" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/groupcodeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayoutID" />
+
+    <ListView
+        android:id="@+id/userlistview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
+        android:drawSelectorOnTop="false"
+        app:layout_constraintBottom_toTopOf="@+id/groupcodeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayoutID" />
+
+    <TextView
+        android:id="@+id/completedTrainingsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/companynamefield" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

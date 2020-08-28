@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reviewTrainingsConstraintContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newappbackground"
+    tools:context="com.something.KingdomSafety.ManageTrainings">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/manageTrainingsLottieView"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toTopOf="@id/nextButton"
+        app:layout_constraintEnd_toEndOf="@id/previewtrainingcontainer"
+        app:layout_constraintStart_toStartOf="@id/previewtrainingcontainer"
+        app:layout_constraintTop_toBottomOf="@id/trainingListContainer"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loadingindicator" />
+
+    <Button
+        android:id="@+id/backtoGroupType"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:background="#00FFFFFF"
+        android:drawableTop="@drawable/ic_chevron_left_24px"
+        android:onClick="backToAdminSettingsClicked"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ReviewTrainingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Manage\nTrainings"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/trainingListContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/addButton"
+        app:layout_constraintTop_toBottomOf="@+id/ReviewTrainingsTitle"
+        app:srcCompat="@drawable/groups_borders" />
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:onClick="editButtonPressed"
+        android:text="EDIT"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/trainingListContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ListView
+        android:id="@+id/regulartrainingnameslist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:divider="#00000000"
+        android:dividerHeight="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/trainingListContainer"
+        app:layout_constraintEnd_toEndOf="@+id/trainingListContainer"
+        app:layout_constraintStart_toStartOf="@+id/trainingListContainer"
+        app:layout_constraintTop_toTopOf="@+id/trainingListContainer" >
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/rearrangeabletrainingnameslist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:divider="#00000000"
+        android:dividerHeight="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/trainingListContainer"
+        app:layout_constraintEnd_toEndOf="@+id/trainingListContainer"
+        app:layout_constraintStart_toStartOf="@+id/trainingListContainer"
+        app:layout_constraintTop_toTopOf="@+id/trainingListContainer" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/groups_button_style"
+        android:onClick="nextButtonPressed"
+        android:text="DONE"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/groups_button_style"
+        android:onClick="addTrainingButtonPressed"
+        android:text="ADD"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/nextButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trainingListContainer" />
+
+    <ImageView
+        android:id="@+id/blankdummyview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/previewtrainingcontainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/preview_trainings_container_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <Button
+            android:id="@+id/cancelWindowButton"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:background="#00FFFFFF"
+            android:drawableTop="@drawable/ic_cancel_button_18dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/previewtrainingname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="15dp"
+            app:layout_goneMarginEnd="15dp"
+            android:gravity="center"
+            android:textSize="24dp"
+            android:textColor="@color/blackColor"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ListView
+            android:id="@+id/previewtraininglistview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:divider="#00000000"
+            android:dividerHeight="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toStartOf="@id/previewtrainingcontainer"
+            app:layout_constraintEnd_toEndOf="@id/previewtrainingcontainer"
+            app:layout_constraintTop_toBottomOf="@id/previewtrainingname"
+            app:layout_constraintBottom_toBottomOf="@id/previewtrainingcontainer"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

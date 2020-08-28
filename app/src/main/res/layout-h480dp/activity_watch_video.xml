@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newappbackground"
+    tools:context=".WatchVideo">
+
+    <ImageView
+        android:id="@+id/whitebehindvidbackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/gototaketestbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homebutton"
+        app:srcCompat="@drawable/groups_button_style" />
+
+    <Button
+        android:id="@+id/homebutton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#00FFFFFF"
+        android:drawableTop="@drawable/ic_chevron_left_24px"
+        android:onClick="backtoUserScreen"
+        android:paddingTop="20dp"
+        android:paddingLeft = "15dp"
+        app:layout_constraintBottom_toTopOf="@+id/whitebehindvidbackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/gototaketestbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="100dp"
+        android:onClick="gotoTakeTest"
+        android:text="Next"
+        android:background="@drawable/groups_button_style"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/whitebehindvidbackground"
+        app:layout_constraintStart_toStartOf="@+id/whitebehindvidbackground"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/myYoutubeView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/whitebehindvidbackground"
+        app:layout_constraintEnd_toEndOf="@+id/whitebehindvidbackground"
+        app:layout_constraintStart_toStartOf="@+id/whitebehindvidbackground"
+        app:layout_constraintTop_toTopOf="@+id/whitebehindvidbackground" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

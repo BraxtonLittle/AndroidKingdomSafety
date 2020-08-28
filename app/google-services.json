@@ -1,0 +1,79 @@
+{
+  "project_info": {
+    "project_number": "486883986677",
+    "firebase_url": "https://logintesting-4be90.firebaseio.com",
+    "project_id": "logintesting-4be90",
+    "storage_bucket": "logintesting-4be90.appspot.com"
+  },
+  "client": [
+    {
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0EOH8ZNz9ub-Rje4_hBJPjxfgkVAN4ao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486883986677-ik92i28r866lo3u1d3udmal2k4hvpa5i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "486883986677-ica4vdar2uido2jdolpnn33d5r4qbb9u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Elijah.CustomLogin"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486883986677:android:8e3755dfda526a3d6889bc",
+        "android_client_info": {
+          "package_name": "com.something.welcomescreen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486883986677-useo3t58mvbu3nof8c4jri4nqhlaitu3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.something.welcomescreen",
+            "certificate_hash": "d27a41675ea85abcf0cc4d53860c1ead06629fa0"
+          }
+        },
+        {
+          "client_id": "486883986677-ik92i28r866lo3u1d3udmal2k4hvpa5i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0EOH8ZNz9ub-Rje4_hBJPjxfgkVAN4ao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486883986677-ik92i28r866lo3u1d3udmal2k4hvpa5i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "486883986677-ica4vdar2uido2jdolpnn33d5r4qbb9u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Elijah.CustomLogin"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

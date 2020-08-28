@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/newappbackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserSettings">
+
+    <Button
+        android:id="@+id/homebutton3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#00FFFFFF"
+        android:drawableTop="@drawable/ic_chevron_left_24px"
+        android:onClick="backtoAdminScreen"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="60dp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/userSettingsLinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/usernameTextView"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/watchedVidImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_help_outline_24px"/>
+        <ImageView
+            android:id="@+id/playButtonImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_play_circle_outline_24px"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/userSettingsLinearlayout2nd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/userSettingsLinearlayout"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <Button
+            android:id="@+id/removeuserbutton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:onClick="deleteUserPressed"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:drawableTop="@drawable/ic_deleteusericon"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userSettingsLinearlayout" />
+
+        <Button
+            android:id="@+id/userreportbutton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:onClick="generateUserReportClicked"
+            android:background="#00FFFFFF"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_userreporticon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userSettingsLinearlayout" />
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/userSettingsAnimationView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userSettingsLinearlayout2nd"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loadingindicator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newappbackground"
+    tools:context="com.something.KingdomSafety.AdminSettings">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/adminsettingsanimationview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/adminSettingsLinearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settingsTextViewTitle"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loadingindicator" />
+
+    <LinearLayout
+        android:id="@+id/adminSettingsLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/manageTrainingsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adminsettingsanimationview">
+
+        <Button
+            android:id="@+id/joinGroupButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:onClick="fromSettingstoJoinGroup"
+            android:background="@drawable/thin_border_style"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="Join Group"
+            android:textColor="@color/whiteColor"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/manageTrainingsButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/groupListButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
+            android:onClick="fromSettingstoSelectGroup"
+            android:background="@drawable/thin_border_style"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="Group List"
+            android:textColor="@color/whiteColor"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/manageTrainingsButton"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/helpButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/thin_border_style"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="Help"
+        android:textColor="@color/whiteColor"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/signOutButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/manageTrainingsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/thin_border_style"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:onClick="toManageTrainings"
+        android:text="Manage Trainings"
+        android:textColor="@color/whiteColor"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/helpButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/thin_border_style"
+        android:text="Sign Out"
+        android:onClick="signOutButtonPressed"
+        android:textColor="@color/whiteColor"
+        android:textSize="20dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/backbutton"
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:background="#00FFFFFF"
+        android:drawableTop="@drawable/ic_chevron_left_24px"
+        android:onClick="fromSettingstoAdminScreen"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/settingsTextViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Settings"
+        android:textColor="@color/whiteColor"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#a9a9a9</color>
+    <color name="colorPrimaryDark">#a9a9a9</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="whiteColor">#FFFFFF</color>
+    <color name="blackColor">#000000</color>
+    <color name = "colorPrimaryBlue">#0000FF</color>
+    <color name = "navbarlightgray">#D3D3D3</color>
+    <color name = "transparentBackground">#00FFFFFF</color>
+    <color name = "cursorBlack">#000000</color>
+    <color name = "lightGrey">#4d4e4f</color>
+</resources>

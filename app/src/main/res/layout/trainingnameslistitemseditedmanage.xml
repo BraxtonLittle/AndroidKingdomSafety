@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Definig a container for you List Item-->
+<!-- Defining where should text be placed. You set you text color here-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:label="trainingnameediteditem"
+    tools:context="com.something.KingdomSafety.LoginActivity"
+    >
+
+    <Button
+        android:id="@+id/rearrangeitemsbutton"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ic_menu_white_18dp"
+        app:layout_constraintBottom_toBottomOf="@id/weeksTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/trainingscustomtextview" />
+
+    <TextView
+        android:id="@+id/trainingscustomtextview"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/listview_border_style"
+        android:focusable="false"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:singleLine="true"
+        android:text="sample"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/weeksTextView"
+        app:layout_constraintEnd_toStartOf="@+id/rearrangeitemsbutton"
+        app:layout_constraintStart_toEndOf="@+id/deleteTrainingButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weeksTextView"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/listview_border_style"
+        android:focusable="false"
+        android:gravity="center"
+        android:layout_marginTop="45dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="weeks"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/trainingscustomtextview"
+        app:layout_constraintEnd_toEndOf="@+id/trainingscustomtextview"
+        app:layout_constraintStart_toStartOf="@+id/trainingscustomtextview" />
+
+    <Button
+        android:id="@+id/deleteTrainingButton"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/ic_minus_sign_icon"
+        app:layout_constraintBottom_toBottomOf="@id/weeksTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/trainingscustomtextview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

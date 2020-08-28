@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.something.KingdomSafety">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="KingdomSafety"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.ActionBar">
+        <activity android:name=".ManageTrainings"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AdminSettings"
+            android:screenOrientation="portrait" />
+        <activity android:name=".QuestionGeneratingScreen"
+            android:screenOrientation="portrait" />
+        <activity android:name=".AddTrainingFirstScreen"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ReviewTrainings"
+            android:screenOrientation="portrait" />
+        <activity android:name=".kscstLoadingScreen"
+            android:screenOrientation="portrait" />
+        <activity android:name=".FinishedQuizScreen"
+            android:screenOrientation="portrait" />
+        <activity android:name=".UserSettings"
+            android:screenOrientation="portrait" />
+        <activity android:name=".TakeTest"
+            android:screenOrientation="portrait" />
+        <activity android:name=".WatchVideo"
+            android:screenOrientation="portrait" />
+        <activity android:name=".AdminScreen"
+            android:screenOrientation="portrait" />
+        <activity android:name=".GroupCreatedView"
+            android:screenOrientation="portrait" />
+        <activity android:name=".GroupCategories"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SplashScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".JoinExistingGroup"
+            android:screenOrientation="portrait" />
+        <activity android:name=".JoinStartGroup"
+            android:screenOrientation="portrait" />
+        <activity android:name=".CreateNewGroup"
+            android:screenOrientation="portrait" />
+        <activity android:name=".UserReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UsersScreen"
+            android:label="@string/title_activity_users_screen"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SelectGroup"
+            android:screenOrientation="portrait" /> <!-- This is the one I changed -->
+        <activity android:name=".SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SplashScreen"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".LoginSignup"
+            android:label="@string/title_activity_displayed_app_name"
+            android:theme="@style/AppTheme.ActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter android:label="Kingdom Safety">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
